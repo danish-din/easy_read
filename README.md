@@ -14,7 +14,7 @@ A Home Assistant custom integration to enable an accessible, high-contrast, larg
 
 ### HACS (Recommended)
 1. Go to HACS → Integrations → Custom Repositories
-2. Add this repository: `https://github.com/danish.din/easy_read_mode` as an **Integration**
+2. Add this repository: `https://github.com/danish-din/easy_read` as an **Integration**
 3. Search for and install **Easy Read Mode**
 
 ### Manual
@@ -75,4 +75,4 @@ frontend:
 - [browser_mod](https://github.com/thomasloven/hass-browser_mod) must be installed and loaded
 
 ## Support
-For issues, open an issue on [GitHub](https://github.com/danish.din/easy_read_mode).
+For issues, open an issue on [GitHub](https://github.com/danish-din/easy_read).
