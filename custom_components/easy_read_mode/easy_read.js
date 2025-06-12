@@ -32,15 +32,13 @@
   }
 
   const easyread = getQueryParam("easyread");
-  if (easyread === null) return; // Only act if param is present
+  if (!easyread) return; // Only act if param is present
 
-  await waitForHassConnection();
-  const browserID = await waitForBrowserMod();
+  // Set zoom level based on easyread param (default 1x)
+  const zoom = parseFloat(easyread) || 1;
+  document.documentElement.style.setProperty('zoom', zoom);
+  document.body.style.setProperty('zoom', zoom);
 
-  const theme = easyread === "1" ? "easyread" : "default";
-
-  window.browser_mod.sendCommand("browser_mod/theme", {
-    browser_id: browserID,
-    theme: theme
-  });
+  // Optionally, set a data attribute for custom CSS
+  document.documentElement.setAttribute('data-easyread-zoom', zoom);
 })();

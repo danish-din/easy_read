@@ -2,13 +2,13 @@
 
 [![hacs badge](https://img.shields.io/badge/HACS-Default-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
-A Home Assistant custom integration to enable an accessible, high-contrast, large-font theme for Lovelace dashboards using a simple URL parameter and [browser_mod](https://github.com/thomasloven/hass-browser_mod).
+A Home Assistant custom integration to make dashboards instantly more readable for everyone. Just add `?easyread=2` (or any zoom factor) to your URL—no setup, no configuration, no themes required!
 
 ## Features
-- Toggle easy-read mode with `?easyread=1` in the URL
-- Automatically applies the `easyread` theme for the current browser session
-- Reverts to the default theme with `?easyread=0` or by removing the parameter
-- Requires [browser_mod](https://github.com/thomasloven/hass-browser_mod)
+- Instantly zoom your dashboard with a URL parameter: `?easyread=2` for 2x zoom, `?easyread=1.5` for 1.5x, etc.
+- No configuration or theme setup required
+- Works out of the box, like Kiosk Mode
+- Great for accessibility, presentations, and public displays
 
 ## Installation
 
@@ -32,47 +32,13 @@ lovelace:
       type: module
 ```
 
-### 2. Create the `easyread` theme
-Example `themes/easyread.yaml`:
-
-```yaml
-easyread:
-  primary-color: "#222222"
-  accent-color: "#FFD600"
-  background-color: "#FFFFFF"
-  text-primary-color: "#111111"
-  text-medium-light-color: "#222222"
-  card-background-color: "#F9F9F9"
-  paper-card-header-color: "#111111"
-  paper-item-icon-color: "#222222"
-  paper-listbox-color: "#111111"
-  paper-toggle-button-checked-bar-color: "#FFD600"
-  paper-toggle-button-checked-button-color: "#FFD600"
-  paper-toggle-button-checked-ink-color: "#FFD600"
-  ha-card-border-radius: "12px"
-  font-size: "20px"
-  paper-font-body1_-_font-size: "20px"
-  paper-font-body2_-_font-size: "22px"
-  paper-font-subhead_-_font-size: "24px"
-  paper-font-headline_-_font-size: "28px"
-  paper-font-title_-_font-size: "32px"
-```
-
-Include your theme in `configuration.yaml`:
-
-```yaml
-frontend:
-  themes: !include_dir_merge_named themes
-```
-
-### 3. Usage
-- To enable Easy Read mode:  
-  Visit your dashboard with `?easyread=1` in the URL (e.g., `https://your-ha:8123/lovelace/default_view?easyread=1`)
-- To disable:  
-  Use `?easyread=0` or remove the parameter.
+## Usage
+- To zoom your dashboard, simply add `?easyread=2` (or any number) to your URL:
+  - Example: `https://your-ha:8123/lovelace/default_view?easyread=2`
+- Remove the parameter or set `?easyread=1` to return to normal view.
 
 ## Requirements
-- [browser_mod](https://github.com/thomasloven/hass-browser_mod) must be installed and loaded
+- None! No themes, no browser_mod, no configuration—just install and use.
 
 ## Support
 For issues, open an issue on [GitHub](https://github.com/danish-din/easy_read).
