@@ -1,0 +1,10 @@
+{
+  "domain": "easy_read_mode",
+  "name": "Easy Read Mode",
+  "version": "1.0.0",
+  "documentation": "https://github.com/danish.din/easy_read_mode",
+  "requirements": [],
+  "codeowners": ["@danish.din"],
+  "integration_type": "frontend",
+  "iot_class": "local_push"
+}
