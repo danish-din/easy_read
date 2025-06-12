@@ -1,0 +1,7 @@
+{
+  "name": "Easy Read Mode",
+  "content_in_root": false,
+  "domains": ["easy_read_mode"],
+  "country": "worldwide",
+  "homeassistant": "2023.0.0"
+}
